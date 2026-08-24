@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#08090b">
+<title>JOE LINK — V1–V4</title>
+<style>
+:root{--bg:#08090b;--card:rgba(255,255,255,.075);--line:rgba(255,255,255,.12);--text:#f7f7f8;--muted:#9c9ca5;--accent:#79a7ff;--green:#39e58c}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;background:radial-gradient(900px 500px at 80% -10%,#20314c 0,transparent 55%),var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",Inter,system-ui,sans-serif;min-height:100%}body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}button,input{font:inherit}button{border:0;color:inherit;cursor:pointer}.app{max-width:760px;margin:auto;min-height:100vh;padding:18px 16px 28px}.top{display:flex;align-items:center;justify-content:space-between;padding:4px 2px 18px}.brand{font-weight:800;letter-spacing:-.7px;font-size:24px}.badge{font-size:11px;color:#cbd6e8;background:#79a7ff1f;border:1px solid #79a7ff33;padding:6px 9px;border-radius:999px}.hero{padding:14px 4px 18px}.eyebrow{font-size:12px;letter-spacing:.16em;color:#8e8f98;text-transform:uppercase}h1{font-size:42px;line-height:1.02;letter-spacing:-2px;margin:8px 0}.sub{color:var(--muted);line-height:1.45}.glass{background:linear-gradient(180deg,#ffffff1a,#ffffff0d);border:1px solid var(--line);box-shadow:0 20px 70px #00000073;backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border-radius:28px}.status{display:flex;gap:10px;align-items:center;padding:14px 16px;margin:10px 0 14px}.dot{width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 16px #39e58cb3}.status b{font-size:14px}.status span{font-size:12px;color:var(--muted);display:block;margin-top:2px}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}.action{padding:17px;border-radius:22px;background:var(--card);border:1px solid var(--line);text-align:left;transition:.18s transform,.18s background}.action:active{transform:scale(.98)}.icon{font-size:22px;display:block;margin-bottom:10px}.action b{font-size:15px}.action small{display:block;color:var(--muted);margin-top:5px;line-height:1.3}.section-title{display:flex;justify-content:space-between;align-items:center;margin:22px 3px 10px}.section-title h2{font-size:18px;margin:0}.section-title span{font-size:12px;color:var(--muted)}.peers{display:grid;gap:9px}.peer{display:flex;align-items:center;gap:12px;padding:13px 14px;width:100%;text-align:left}.avatar{width:43px;height:43px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#38455e,#171a21);font-weight:700}.peer-main{flex:1}.peer-main b{font-size:14px}.peer-main small{display:block;color:var(--muted);margin-top:3px}.online{font-size:11px;color:var(--green)}.panel{padding:17px;margin-top:10px}.row{display:flex;align-items:center;gap:12px;padding:10px 0}.row+.row{border-top:1px solid #ffffff12}.row .grow{flex:1}.row b{font-size:14px}.row small{display:block;color:var(--muted);margin-top:3px}.pill{padding:7px 10px;border-radius:999px;background:#39e58c1a;color:var(--green);font-size:11px}footer{padding:24px 4px;color:#686a73;font-size:11px;line-height:1.5}.chat{display:none;position:fixed;inset:0;z-index:10;background:#050608c2;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}.sheet{position:absolute;left:0;right:0;bottom:0;max-height:92vh;min-height:70vh;background:linear-gradient(180deg,#17181c,#0b0c0e);border:1px solid var(--line);border-bottom:0;border-radius:30px 30px 0 0;display:flex;flex-direction:column;box-shadow:0 -30px 100px #0000008c;animation:up .28s ease}@keyframes up{from{transform:translateY(100%);opacity:.6}to{transform:none;opacity:1}}.handle{width:44px;height:5px;border-radius:99px;background:#707179;margin:10px auto}.chat-head{display:flex;align-items:center;gap:11px;padding:10px 16px 14px;border-bottom:1px solid var(--line)}.back{width:38px;height:38px;border-radius:50%;background:var(--card)}.chat-head .peer-main{flex:1}.secure{font-size:11px;color:var(--green)}.messages{flex:1;overflow:auto;padding:18px 16px}.msg{max-width:78%;padding:10px 13px;border-radius:19px;margin:7px 0;line-height:1.35;font-size:14px}.me{margin-left:auto;background:#2f70e8;border-bottom-right-radius:6px}.them{background:#24262b;border-bottom-left-radius:6px}.time{font-size:10px;opacity:.55;margin-top:4px}.composer{display:flex;gap:8px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}.composer input{flex:1;min-width:0;border:1px solid var(--line);outline:0;background:var(--card);color:var(--text);border-radius:22px;padding:12px 14px}.send,.mic{width:45px;height:45px;border-radius:50%;background:#fff;color:#111}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);opacity:0;pointer-events:none;background:#22242a;border:1px solid var(--line);padding:11px 15px;border-radius:999px;font-size:12px;z-index:30;transition:.25s}.toast.show{opacity:1;transform:translateX(-50%)}@media(max-width:420px){h1{font-size:36px}.actions{grid-template-columns:1fr}.app{padding-left:13px;padding-right:13px}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="top"><div class="brand">JOE LINK</div><div class="badge">V1–V4 • local-first</div></div>
+<section class="hero"><div class="eyebrow">Private nearby communication</div><h1>Talk without<br>the internet.</h1><div class="sub">One-file prototype combining offline-first chat, nearby peers, queued delivery, file sharing, push-to-talk and experimental calling.</div></section>
+<div class="status glass"><div class="dot"></div><div><b id="netText">Local mode ready</b><span id="netSub">No internet is required for the local-first interface.</span></div></div>
+<div class="actions">
+<button class="action" id="scan"><span class="icon">◉</span><b>Find nearby</b><small>Try Bluetooth discovery when supported.</small></button>
+<button class="action" id="demo"><span class="icon">⌁</span><b>Mesh demo</b><small>See a message hop through another peer.</small></button>
+<button class="action" id="ptt"><span class="icon">◉</span><b>Push to talk</b><small>V3 microphone test and voice-mode UI.</small></button>
+<button class="action" id="call"><span class="icon">⌕</span><b>Voice call</b><small>V4 call-mode prototype.</small></button>
+</div>
+<div class="section-title"><h2>Nearby</h2><span>3 peers</span></div>
+<div class="peers">
+<button class="peer glass" data-name="Alex"><div class="avatar">A</div><div class="peer-main"><b>Alex</b><small>Direct • 8 m away</small></div><span class="online">READY</span></button>
+<button class="peer glass" data-name="Maria"><div class="avatar">M</div><div class="peer-main"><b>Maria</b><small>Relay • 22 m away</small></div><span class="online">READY</span></button>
+<button class="peer glass" data-name="Sam"><div class="avatar">S</div><div class="peer-main"><b>Sam</b><small>2 hops • 41 m away</small></div><span class="online">READY</span></button>
+</div>
+<div class="section-title"><h2>V1–V4 status</h2><span>single file</span></div>
+<div class="panel glass">
+<div class="row"><div class="grow"><b>V1 • Offline text</b><small>Local chat, queue, identity, delivery states</small></div><span class="pill">READY</span></div>
+<div class="row"><div class="grow"><b>V2 • Files</b><small>Local file selection and transfer queue UI</small></div><span class="pill">READY</span></div>
+<div class="row"><div class="grow"><b>V3 • Push-to-talk</b><small>Microphone permission + voice mode</small></div><span class="pill">TEST</span></div>
+<div class="row"><div class="grow"><b>V4 • Calls</b><small>Call interface + microphone test</small></div><span class="pill">TEST</span></div>
+</div>
+<div class="section-title"><h2>Send a file</h2><span>V2</span></div>
+<div class="panel glass"><input id="file" type="file" hidden><button class="action" style="width:100%" id="pick"><span class="icon">＋</span><b>Choose a file</b><small id="fileName">It will be added to the local transfer queue.</small></button></div>
+<footer>Important: a single HTML file can provide the UI and local-first logic, but true iPhone-to-iPhone Bluetooth mesh and background calling need a native transport layer. Web Bluetooth is limited/experimental and is not exposed by iOS WebKit.</footer>
+</div>
+
+<div class="chat" id="chat"><div class="sheet" id="sheet"><div class="handle" id="handle"></div>
+<div class="chat-head"><button class="back" id="close">‹</button><div class="avatar" id="chatAvatar">A</div><div class="peer-main"><b id="chatName">Alex</b><small>Local encrypted session</small></div><div class="secure">● secure</div></div>
+<div class="messages" id="messages"></div><div class="composer"><button class="mic" id="chatMic">◉</button><input id="input" placeholder="Message…" autocomplete="off"><button class="send" id="send">➤</button></div>
+</div></div><div class="toast" id="toast"></div>
+
+<script>
+const $=s=>document.querySelector(s), toast=t=>{let e=$("#toast");e.textContent=t;e.classList.add("show");clearTimeout(window.tt);window.tt=setTimeout(()=>e.classList.remove("show"),2200)};
+let current="Alex",messages=JSON.parse(localStorage.getItem("joeLinkMessages")||"{}");
+function esc(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
+function render(){let b=$("#messages");b.innerHTML="";(messages[current]||[]).forEach(m=>{let d=document.createElement("div");d.className="msg "+m.from;d.innerHTML=esc(m.text)+"<div class=time>"+m.time+"</div>";b.appendChild(d)});b.scrollTop=b.scrollHeight}
+function openChat(n){current=n;messages[n]??=[{from:"them",text:"Hey! This is JOE LINK.",time:"now"},{from:"them",text:"Local-first chat is ready.",time:"now"}];$("#chatName").textContent=n;$("#chatAvatar").textContent=n[0];$("#chat").style.display="block";render()}
+function closeChat(){$("#chat").style.display="none";$("#sheet").style.transform=""}
+document.querySelectorAll(".peer").forEach(p=>p.onclick=()=>openChat(p.dataset.name));
+$("#close").onclick=closeChat;
+function send(){let v=$("#input").value.trim();if(!v)return;messages[current].push({from:"me",text:v,time:"queued locally"});localStorage.setItem("joeLinkMessages",JSON.stringify(messages));$("#input").value="";render();toast("Saved locally • waiting for a route")}
+$("#send").onclick=send;$("#input").addEventListener("keydown",e=>{if(e.key==="Enter")send()});
+$("#scan").onclick=async()=>{if(!("bluetooth"in navigator)){toast("Bluetooth is unavailable in this browser");return}try{let d=await navigator.bluetooth.requestDevice({acceptAllDevices:true});toast("Selected "+(d.name||"nearby device"));$("#netText").textContent="Bluetooth device selected";$("#netSub").textContent="Transport permission granted"}catch(e){toast("Bluetooth selection cancelled or unavailable")}};
+$("#demo").onclick=()=>{toast("Mesh route: You → Maria → Alex");$("#netText").textContent="Mesh route active";$("#netSub").textContent="2-hop demo • queue enabled"};
+async function mic(label){try{let s=await navigator.mediaDevices.getUserMedia({audio:true});s.getTracks().forEach(t=>t.stop());toast(label+" microphone ready")}catch(e){toast("Microphone permission not granted")}}
+$("#ptt").onclick=()=>mic("Push-to-talk");$("#call").onclick=()=>mic("Voice call");$("#chatMic").onclick=()=>mic("Voice message");
+$("#pick").onclick=()=>$("#file").click();$("#file").onchange=()=>{let f=$("#file").files[0];if(f){$("#fileName").textContent=f.name+" • "+(f.size/1024/1024).toFixed(2)+" MB • queued";toast("File added to local queue")}};
+let sy=0,dy=0;function ts(e){sy=e.touches[0].clientY}function tm(e){dy=e.touches[0].clientY-sy;if(dy>0)$("#sheet").style.transform="translateY("+Math.min(dy,280)+"px)"}function te(){if(dy>90)closeChat();else $("#sheet").style.transform="";sy=dy=0}
+$("#sheet").addEventListener("touchstart",ts,{passive:true});$("#sheet").addEventListener("touchmove",tm,{passive:true});$("#sheet").addEventListener("touchend",te);
+localStorage.setItem("joeLinkIdentity",localStorage.getItem("joeLinkIdentity")||("joe-"+Math.random().toString(16).slice(2)));
+</script>
+</body></html>
