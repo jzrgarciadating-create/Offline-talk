@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#08090d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="JOE LINK">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+<title>JOE LINK</title>
+</head>
+<body>
+<div class="app">
+<header class="top glass"><div><b>JOE LINK</b><small>Talk without the internet.</small></div><button id="profile" class="round">●</button></header>
+<main>
+<section class="glass status"><div class="row"><i class="dot"></i><div><label>LOCAL MODE</label><strong id="transport">Browser prototype</strong></div><em id="bt">Checking…</em></div><p id="limit">Local-first prototype. No account, backend, ads, or paid service.</p></section>
+
+<section class="grid">
+<button class="glass feature" data-action="find"><span>⌁</span><b>Find Nearby</b><small>Discoverable peers</small></button>
+<button class="glass feature" data-action="mesh"><span>◈</span><b>Mesh Demo</b><small>Simulated routing</small></button>
+<button class="glass feature" data-action="ptt"><span>◉</span><b>Push to Talk</b><small>Microphone test</small></button>
+<button class="glass feature" data-action="call"><span>⌕</span><b>Voice Call</b><small>WebRTC-ready UI</small></button>
+</section>
+
+<section><div class="title">Nearby peers <small>DEMO DEVICES</small></div><div id="peers" class="glass list"></div></section>
+<section><div class="title">V1–V4 <small>STATUS</small></div><div class="glass versions">
+<div><b>V1</b><span>Offline text</span><i>Ready</i></div>
+<div><b>V2</b><span>Local file queue</span><i>Ready</i></div>
+<div><b>V3</b><span>Push to talk</span><i>Browser test</i></div>
+<div><b>V4</b><span>Voice call</span><i>Prototype</i></div>
+</div></section>
+
+<section class="glass files"><div class="title">Files <button id="choose">Choose file</button></div><input id="file" type="file" multiple hidden><div id="queue" class="empty">No files queued.</div></section>
+</main>
+
+<div id="toast" class="toast"></div>
+
+<div id="chat" class="sheet"><div class="backdrop" data-close-chat></div><section class="glass panel">
+<div class="grab"></div><header class="chathead"><button data-close-chat>‹</button><div id="chatAvatar" class="avatar">A</div><div class="chatname"><b id="chatName">Alex</b><small id="chatRoute">Direct · 8 m</small></div><button id="chatCall" class="round">⌕</button></header>
+<div id="messages" class="messages"></div>
+<div class="glass composer"><button id="chatMic">◉</button><input id="input" placeholder="Message locally…" autocomplete="off"><button id="send">↑</button></div>
+</section></div>
+
+<div id="ptt" class="modal"><section class="glass modalbox"><button class="close" data-close>×</button><label>V3 · PUSH TO TALK</label><h2>Hold to talk</h2><p>Records locally when supported. It does not claim Bluetooth transmission.</p><div id="recordState">Ready</div><button id="hold" class="hold">Hold</button><audio id="preview" controls hidden></audio></section></div>
+
+<div id="call" class="modal call"><section><button class="close light" data-close>×</button><div id="callAvatar" class="callavatar">A</div><label>V4 · VOICE CALL</label><h2 id="callName">Alex</h2><div id="timer">00:00</div><p id="callStatus">Local/WebRTC prototype — no cellular call</p><div class="controls"><button id="mute">🎙<small>Mute</small></button><button id="speaker">🔊<small>Speaker</small></button><button id="end" class="end">☎<small>End</small></button></div></section></div>
+
+<div id="mesh" class="modal"><section class="glass modalbox"><button class="close" data-close>×</button><label>MESH DEMO</label><h2>Nearby routing</h2><p>Visualizes a future native relay path. No fake radio packets are sent.</p><div id="nodes"></div><button id="reroute" class="primary">Simulate route</button></section></div>
+</div>
+<script src="app.js" defer></script>
+</body></html>
